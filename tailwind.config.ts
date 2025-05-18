@@ -106,8 +106,43 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				serif: ['Georgia', 'serif']
-			}
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: 'none',
+						color: 'inherit',
+						a: {
+							color: 'inherit',
+							textDecoration: 'none',
+							fontWeight: 'inherit',
+						},
+						strong: {
+							fontWeight: 600,
+						},
+						h1: {
+							fontWeight: 600,
+						},
+						h2: {
+							fontWeight: 600,
+						},
+						h3: {
+							fontWeight: 600,
+						},
+						h4: {
+							fontWeight: 600,
+						},
+						code: {
+							color: 'inherit',
+							fontWeight: '400',
+						},
+					},
+				},
+			},
 		}
 	},
-	plugins: [require("tailwindcss-animate")],
+	plugins: [
+		require("tailwindcss-animate"),
+		require('@tailwindcss/typography')
+	],
 } satisfies Config;
